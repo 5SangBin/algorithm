@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int N;
+    cin >> N;
+    int score[N];
+    
+    for(int n = 0; n<N;n++){
+        cin >> score[n];
+    }
+    
+    long sum = 0;
+    long maxnum = 0;
+    
+    for(int i = 0 ;i<N;i++){
+        if (score[i]>maxnum){
+            maxnum = score[i];
+        }
+        sum += score[i];
+    }
+    double result = sum*100.0/maxnum/N;
+    cout<<result<<endl;
+}
