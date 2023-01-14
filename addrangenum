@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int num, qnum;
+    cin >> num >> qnum;
+    int S[100001] = {};
+    
+    for (int i = 1;i <= num;i++){
+        int temp;
+        cin >> temp;
+        S[i] = S[i-1] + temp;
+    }
+    for (int i = 0;i < qnum;i++){
+        int start, end;
+        cint >> start >> end;
+        cout << S[end] - S[start-1] << endl;
+    }
+}
