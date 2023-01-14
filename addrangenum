@@ -13,7 +13,7 @@ int main(){
     }
     for (int i = 0;i < qnum;i++){
         int start, end;
-        cint >> start >> end;
+        cin >> start >> end;
         cout << S[end] - S[start-1] << endl;
     }
 }
